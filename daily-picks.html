@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Detroit Movement Weekend Curated Daily Picks 2026</title>
+<style>
+  :root {
+    --ink: #151515;
+    --muted: #68645d;
+    --paper: #f6f1e7;
+    --surface: #fffdf8;
+    --line: #d8d0c0;
+    --acid: #d8ff3d;
+    --orange: #ff7a1a;
+    --pink: #f24f93;
+    --teal: #0fa89a;
+    --black: #090909;
+    --shadow: 0 14px 36px rgba(18, 17, 15, .12);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  section[id], article[id] { scroll-margin-top: 84px; }
+  body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--paper); letter-spacing: 0; }
+  a { color: inherit; }
+  .topbar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; background: rgba(9,9,9,.96); color: #fffdf8; border-bottom: 4px solid var(--acid); }
+  .brand { font-weight: 900; font-size: .96rem; text-transform: uppercase; }
+  .topbar nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .topbar a { color: #fffdf8; text-decoration: none; font-size: .85rem; padding: 6px 8px; border: 1px solid rgba(255,255,255,.18); border-radius: 6px; }
+  .hero { background: var(--black); color: #fffdf8; padding: 34px 24px 24px; border-bottom: 1px solid #2c2c2c; }
+  .hero-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); gap: 28px; align-items: end; }
+  h1 { margin: 0 0 12px; font-size: clamp(2rem, 4.4vw, 4.5rem); line-height: .95; letter-spacing: 0; max-width: 880px; }
+  .lede { margin: 0; max-width: 820px; color: #d9d2c4; line-height: 1.55; font-size: 1rem; }
+  .stamp { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .stamp span { border: 1px solid rgba(255,255,255,.18); padding: 7px 9px; border-radius: 6px; color: #fff; font-size: .84rem; background: rgba(255,255,255,.06); }
+  .summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .metric { background: #fffdf8; color: var(--ink); border-radius: 8px; padding: 14px; min-height: 88px; border-left: 6px solid var(--orange); }
+  .metric:nth-child(2) { border-left-color: var(--pink); }
+  .metric:nth-child(3) { border-left-color: var(--teal); }
+  .metric:nth-child(4) { border-left-color: var(--acid); }
+  .metric strong { display: block; font-size: 1.8rem; line-height: 1; margin-bottom: 7px; }
+  .metric span { color: var(--muted); font-size: .86rem; line-height: 1.25; display: block; }
+  .daybar { background: #fffdf8; border-bottom: 1px solid var(--line); padding: 14px 24px; }
+  .daybar-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .daybar nav { display: flex; gap: 8px; flex-wrap: wrap; }
+  .daybar a { text-decoration: none; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; background: #f8f4ec; font-size: .86rem; font-weight: 800; }
+  .daybar .full { background: var(--black); color: #fffdf8; border-color: var(--black); }
+  main { max-width: 1180px; margin: 0 auto; padding: 24px; }
+  .note { background: #fffdf8; border: 1px solid var(--line); border-left: 6px solid var(--teal); border-radius: 8px; padding: 12px 14px; color: #4f4a43; line-height: 1.42; margin: 0 0 24px; }
+  .route { margin: 28px 0 42px; }
+  .route-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; padding-bottom: 10px; margin-bottom: 14px; border-bottom: 4px solid var(--black); }
+  .route-head h2 { margin: 0; font-size: 1.45rem; line-height: 1.15; }
+  .route-head p { margin: 0; color: var(--muted); max-width: 520px; line-height: 1.35; text-align: right; }
+  .pick-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .pick { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; min-width: 0; }
+  .poster { aspect-ratio: 16 / 10; background: #1a1a1a; overflow: hidden; }
+  .poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pick-body { padding: 14px; display: flex; flex-direction: column; gap: 9px; min-width: 0; flex: 1; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .meta span { display: inline-flex; align-items: center; min-height: 24px; border-radius: 5px; padding: 3px 7px; font-size: .74rem; font-weight: 900; background: #eee7d7; color: var(--ink); }
+  .meta .free { background: var(--acid); }
+  .meta .low { background: #d8f3ef; }
+  .meta .mid { background: #ffe2c9; }
+  .meta .strong { background: var(--pink); color: #fff; }
+  .pick h3 { margin: 0; font-size: 1.12rem; line-height: 1.15; overflow-wrap: anywhere; }
+  .venue, .lineup, .crowd, .why { margin: 0; line-height: 1.38; font-size: .91rem; }
+  .venue { color: #3e3b35; font-weight: 800; }
+  .lineup { color: var(--muted); }
+  .why { border-left: 4px solid var(--orange); padding-left: 9px; color: #3f3a33; }
+  .crowd { border-left: 4px solid var(--teal); padding-left: 9px; color: #3f3a33; }
+  .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 0; }
+  .facts div { border: 1px solid #e5ddce; border-radius: 6px; padding: 8px; min-width: 0; background: #fffaf0; }
+  dt { color: var(--muted); font-size: .72rem; text-transform: uppercase; font-weight: 900; margin-bottom: 3px; }
+  dd { margin: 0; font-size: .85rem; line-height: 1.25; overflow-wrap: anywhere; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto; padding-top: 4px; }
+  .action, .ghost { text-decoration: none; border-radius: 6px; min-height: 36px; display: inline-flex; align-items: center; justify-content: center; padding: 7px 10px; font-weight: 900; font-size: .84rem; }
+  .action { background: var(--black); color: #fffdf8; }
+  .ghost { border: 1px solid var(--line); color: var(--ink); background: #fff; }
+  .source-panel { margin-top: 34px; padding: 18px 0 8px; border-top: 4px solid var(--black); color: var(--muted); line-height: 1.45; }
+  .source-panel h2 { color: var(--ink); margin: 0 0 8px; font-size: 1.2rem; }
+  .source-panel a { color: var(--ink); font-weight: 900; }
+  @media (max-width: 980px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .pick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 720px) {
+    .topbar { position: static; align-items: flex-start; flex-direction: column; padding: 12px 14px; }
+    section[id], article[id] { scroll-margin-top: 16px; }
+    .hero, .daybar, main { padding-left: 14px; padding-right: 14px; }
+    .summary, .pick-grid, .facts { grid-template-columns: 1fr; }
+    .route-head { align-items: flex-start; flex-direction: column; }
+    .route-head p { text-align: left; }
+    h1 { font-size: 2.25rem; }
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+<div class="brand">Personal Movement Weekend Picks</div>
+<nav>
+<a href="#friday">Friday</a>
+<a href="#saturday">Saturday</a>
+<a href="#sunday">Sunday</a>
+<a href="#monday">Monday</a>
+<a href="#tuesday">Tuesday</a>
+<a href="index.html">Full Dashboard</a>
+</nav>
+</header>
+<section class="hero">
+<div class="hero-inner">
+<div>
+<h1>Three Off-Site Picks For Every Day</h1>
+<p class="lede">A focused, shareable shortlist from the full Detroit Movement weekend dashboard. It keeps only the curated events: cheaper tickets where possible, danceable rooms, social formats, useful crowd reads, and direct ticket links.</p>
+<div class="stamp">
+<span>Outside-festival events only</span>
+<span>15 curated picks</span>
+<span>Most picks are free to under $25</span>
+<span>Prices can change by tier or sell out</span>
+</div>
+</div>
+<div class="summary">
+<div class="metric"><strong>5</strong><span>days covered from Friday through Tuesday</span></div>
+<div class="metric"><strong>9</strong><span>free or under $25 picks</span></div>
+<div class="metric"><strong>$104.55</strong><span>listed total for all Friday-Monday paid picks</span></div>
+<div class="metric"><strong>Big Pink</strong><span>strongest repeated social signal in the shortlist</span></div>
+</div>
+</div>
+</section>
+<section class="daybar">
+<div class="daybar-inner">
+<nav>
+<a href="#friday">Friday</a>
+<a href="#saturday">Saturday</a>
+<a href="#sunday">Sunday</a>
+<a href="#monday">Monday</a>
+<a href="#tuesday">Tuesday Bonus</a>
+</nav>
+<a class="full" href="index.html">Open full 237-event dashboard</a>
+</div>
+</section>
+<main>
+<p class="note">Crowd makeup is not something any listing can verify, so this page does not guarantee who will be there. These picks favor lively social signals: open-format club nights, house and disco rooms, ghetto-tech parties, patios, block parties, and venues that are easier for friend groups than heads-down warehouse sets.</p>
+
+<section class="route" id="friday">
+<div class="route-head">
+<h2>Friday, May 22 - cheap pre-party route</h2>
+<p>Start early, keep the spend low, then end with the strongest Friday social signal.</p>
+</div>
+<div class="pick-grid">
+<article class="pick" id="descendants">
+<div class="poster"><img alt="DESCENDANTS poster" loading="lazy" src="assets/daily-picks/descendants.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>4:00 PM</span><span class="free">Free</span><span>21+</span></div>
+<h3>DESCENDANTS: An Afrohouse Experience</h3>
+<p class="venue">The Skip - 1234 The Belt, Detroit, MI 48226</p>
+<p class="lineup">Playing: Meedy, Pizzi, Ivy, Nativesun</p>
+<p class="why">Why this made the list: free, early, Afro house and Afro tech, and an easy social warm-up in The Belt.</p>
+<dl class="facts"><div><dt>When</dt><dd>Friday, May 22, 4:00 PM to 9:00 PM</dd></div><div><dt>Signal</dt><dd>Interest not listed</dd></div></dl>
+<p class="crowd">Crowd read: casual drop-ins, locals, friend groups, good for sampling the weekend.</p>
+<div class="actions"><a class="action" href="https://dice.fm/event/8e5xar-descendants-an-afrohouse-experience-22nd-may-the-skip-detroit-tickets?pid=d6342b83" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1616-descendants-an-afrohouse-experience">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="temple-disco">
+<div class="poster"><img alt="Temple Bar Official Weekend Disco poster" loading="lazy" src="assets/daily-picks/temple-disco.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>9:00 PM</span><span class="low">$5</span><span>21+</span></div>
+<h3>Temple Bar - Official Weekend Disco</h3>
+<p class="venue">Temple Bar - 2906 Cass Ave, Detroit, MI</p>
+<p class="lineup">Playing: Ginbee, brittpop, Galaga</p>
+<p class="why">Why this made the list: very cheap tech-house and disco, with better mingling energy than a serious warehouse room.</p>
+<dl class="facts"><div><dt>When</dt><dd>Friday, May 22, 9:00 PM to 2:00 AM</dd></div><div><dt>Signal</dt><dd>13 listed interest</dd></div></dl>
+<p class="crowd">Crowd read: social, groove-first, good patio or bar energy where the venue allows it.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2441744" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1681-temple-bar-official-weekend-disco">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="pink-party">
+<div class="poster"><img alt="PINK PARTY poster" loading="lazy" src="assets/daily-picks/pink-party.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>10:00 PM</span><span class="free">Free</span><span class="strong">857 interest</span></div>
+<h3>PINK PARTY: Open Format Bangers</h3>
+<p class="venue">Big Pink</p>
+<p class="lineup">Playing: Problematic Black Hottie, Jody Simms</p>
+<p class="why">Why this made the list: free, 21+, hip-hop and club, and the strongest Friday social signal in the cheap lane.</p>
+<dl class="facts"><div><dt>When</dt><dd>Friday, May 22, 10:00 PM to 2:00 AM</dd></div><div><dt>Status</dt><dd>On sale - RA ticketing</dd></div></dl>
+<p class="crowd">Crowd read: casual drop-ins, locals, friend groups, good for sampling the weekend.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2430048" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1619-pink-party-open-format-bangers-problematicblackhottie-jody-simms-celex-the-">Full card</a></div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="route" id="saturday">
+<div class="route-head">
+<h2>Saturday, May 23 - best cheap night-out route</h2>
+<p>The most balanced day for low ticket prices and social dance-floor energy.</p>
+</div>
+<div class="pick-grid">
+<article class="pick" id="booty-movement">
+<div class="poster"><img alt="BOOTY MOVEMENT 2026 poster" loading="lazy" src="assets/daily-picks/booty-movement.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>9:00 PM</span><span class="low">$5</span><span>21+</span></div>
+<h3>BOOTY MOVEMENT 2026</h3>
+<p class="venue">Temple Bar - 2906 Cass Ave, Detroit, MI</p>
+<p class="lineup">Playing: DJ Angry Nate</p>
+<p class="why">Why this made the list: the cheapest Saturday starter that still fits the house and ghetto-tech party target.</p>
+<dl class="facts"><div><dt>When</dt><dd>Saturday, May 23, 9:00 PM to 2:00 AM</dd></div><div><dt>Signal</dt><dd>13 listed interest</dd></div></dl>
+<p class="crowd">Crowd read: social, groove-first, good patio or bar energy where the venue allows it.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2433031" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1635-booty-movement-2026">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="munch">
+<div class="poster"><img alt="MUNCH B2B BLAKITO B2B SLOT-A poster" loading="lazy" src="assets/daily-picks/munch.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>10:00 PM</span><span class="low">$23</span><span class="strong">635 interest</span></div>
+<h3>MUNCH B2B BLAKITO B2B SLOT-A</h3>
+<p class="venue">Big Pink</p>
+<p class="lineup">Playing: Munch, Slot-A</p>
+<p class="why">Why this made the list: open-format club bangers with house and hip-hop. This is the Saturday main move.</p>
+<dl class="facts"><div><dt>When</dt><dd>Saturday, May 23, 10:00 PM to 2:00 AM</dd></div><div><dt>Status</dt><dd>On sale - RA ticketing</dd></div></dl>
+<p class="crowd">Crowd read: social, groove-first, and better for a mixed friend group than a niche music-head set.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2440444" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1668-munch-b2b-blakito-b2b-slot-a-open-format-club-bangers-chicago-detroit">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="new-detroit">
+<div class="poster"><img alt="New Detroit Movement After Party poster" loading="lazy" src="assets/daily-picks/new-detroit.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>11:00 PM</span><span class="low">$10</span><span>after-hours</span></div>
+<h3>New Detroit Movement After Party</h3>
+<p class="venue">Epiphany Detroit - 10103 Kercheval Ave, Detroit, MI 48214</p>
+<p class="lineup">Playing: GroovePill, DJ Assault, Syd, Lelo, DJ Godfather</p>
+<p class="why">Why this made the list: DJ Assault and DJ Godfather for a late electro and ghetto-tech option that is still affordable.</p>
+<dl class="facts"><div><dt>When</dt><dd>Saturday, May 23, 11:00 PM to 4:00 AM</dd></div><div><dt>Signal</dt><dd>124 listed interest</dd></div></dl>
+<p class="crowd">Crowd read: dense, social, high-stamina, likely to run deep into the morning.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2442799" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1687-new-detroit-movement-after-party">Full card</a></div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="route" id="sunday">
+<div class="route-head">
+<h2>Sunday, May 24 - day-party plus Big Pink closer</h2>
+<p>Do the daytime social stuff, then use Big Pink as the higher-signal night cap.</p>
+</div>
+<div class="pick-grid">
+<article class="pick" id="patio-party">
+<div class="poster"><img alt="The 6th Annual Detroit Patio Party poster" loading="lazy" src="assets/daily-picks/patio-party.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>2:00 PM</span><span class="low">$10</span><span>21+</span></div>
+<h3>The 6th Annual Detroit Patio Party</h3>
+<p class="venue">The Old Miami - 3930 Cass Ave, Detroit, MI 48201</p>
+<p class="lineup">Playing: Tony Nova, DJ Sync</p>
+<p class="why">Why this made the list: cheap daytime house and techno with a long patio window.</p>
+<dl class="facts"><div><dt>When</dt><dd>Sunday, May 24, 2:00 PM to 2:00 AM</dd></div><div><dt>Signal</dt><dd>17 listed interest</dd></div></dl>
+<p class="crowd">Crowd read: social, groove-first, good patio or bar energy where the venue allows it.</p>
+<div class="actions"><a class="action" href="https://www.eventbrite.com/e/the-6th-annual-detroit-party-house-music-techno-patio-session-tickets-1988294241600" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1663-the-6th-annual-detroit-patio-party">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="do-over">
+<div class="poster"><img alt="The Do-Over Block Party poster" loading="lazy" src="assets/daily-picks/do-over.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>3:00 PM</span><span class="free">Free</span><span>21+</span></div>
+<h3>The Do-Over Block Party</h3>
+<p class="venue">The Belt Alley</p>
+<p class="lineup">Playing: Artists not listed</p>
+<p class="why">Why this made the list: free block party format with house and hip-hop, naturally more social than a ticketed listen-only room.</p>
+<dl class="facts"><div><dt>When</dt><dd>Sunday, May 24, 3:00 PM to 10:00 PM</dd></div><div><dt>Signal</dt><dd>28 listed interest</dd></div></dl>
+<p class="crowd">Crowd read: casual drop-ins, locals, friend groups, good for sampling the weekend.</p>
+<div class="actions"><a class="action" href="https://thedoover.net/pages/detroit" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1653-the-do-over-block-party">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="ghetto-tech">
+<div class="poster"><img alt="GHETTO TECH at Big Pink poster" loading="lazy" src="assets/daily-picks/ghetto-tech.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>10:00 PM</span><span class="low">$23</span><span class="strong">805 interest</span></div>
+<h3>GHETTO TECH at Big Pink</h3>
+<p class="venue">Big Pink</p>
+<p class="lineup">Playing: Nanoos, SKY JETTA, Fullbodydurag, DJ KILLA SQUID</p>
+<p class="why">Why this made the list: Big Pink, 21+, ghetto tech, and the highest cheap-night social signal for Sunday.</p>
+<dl class="facts"><div><dt>When</dt><dd>Sunday, May 24, 10:00 PM to 3:00 AM</dd></div><div><dt>Status</dt><dd>On sale - RA ticketing</dd></div></dl>
+<p class="crowd">Crowd read: fast, playful, sweaty, and less polite than a lounge set.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2439221" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1661-ghetto-tech-nanoos-sky-jetta-fullbodydurag-dj-killa-squid-special-guests">Full card</a></div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="route" id="monday">
+<div class="route-head">
+<h2>Monday, May 25 - social closeout route</h2>
+<p>The best closeout mix: one cool day-party splurge, one free patio party, one free Big Pink closer.</p>
+</div>
+<div class="pick-grid">
+<article class="pick" id="bring-dat-ass">
+<div class="poster"><img alt="Bring Dat Ass poster" loading="lazy" src="assets/daily-picks/bring-dat-ass.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>3:00 PM</span><span class="mid">$28.55</span><span>21+</span></div>
+<h3>Bring Dat Ass (&amp;your feet will follow)</h3>
+<p class="venue">Spot Lite Detroit</p>
+<p class="lineup">Playing: Love Injection, Coflo, Rimarkable, Toribio, Kai Alce</p>
+<p class="why">Why this made the list: not the absolute cheapest, but the deep house, soulful house, and disco lane is the cool daytime social pick.</p>
+<dl class="facts"><div><dt>When</dt><dd>Monday, May 25, 3:00 PM to 9:00 PM</dd></div><div><dt>Signal</dt><dd>126 listed interest</dd></div></dl>
+<p class="crowd">Crowd read: social, groove-first, good patio or bar energy where the venue allows it.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2408595" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1567-bring-dat-ass-your-feet-will-follow">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="fiesta-house">
+<div class="poster"><img alt="FIESTA HOUSE poster" loading="lazy" src="assets/daily-picks/fiesta-house.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>4:00 PM</span><span class="free">Free</span><span>119 interest</span></div>
+<h3>FIESTA HOUSE: Patio Day Party</h3>
+<p class="venue">Northern Lights Lounge</p>
+<p class="lineup">Playing: Artists not listed</p>
+<p class="why">Why this made the list: reggaeton and dembow at Northern Lights is the most obvious Monday pick for a more social crowd.</p>
+<dl class="facts"><div><dt>When</dt><dd>Monday, May 25, 4:00 PM to 9:00 PM</dd></div><div><dt>Status</dt><dd>On sale - RA ticketing</dd></div></dl>
+<p class="crowd">Crowd read: casual drop-ins, locals, friend groups, good for sampling the weekend.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2446128" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1733-fiesta-house-patio-day-party">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="hiphop-night">
+<div class="poster"><img alt="HIPHOP NIGHT at Big Pink poster" loading="lazy" src="assets/daily-picks/hiphop-night.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>10:00 PM</span><span class="free">Free</span><span class="strong">588 interest</span></div>
+<h3>HIPHOP NIGHT: DJ Carter B2B DJ KDirty</h3>
+<p class="venue">Big Pink</p>
+<p class="lineup">Playing: DJ KDirty, DJ Carter</p>
+<p class="why">Why this made the list: free, 21+, hip-hop and R&amp;B, and a strong listed-interest signal. Best Monday closer for the criteria.</p>
+<dl class="facts"><div><dt>When</dt><dd>Monday, May 25, 10:00 PM to 2:00 AM</dd></div><div><dt>Status</dt><dd>On sale - RA ticketing</dd></div></dl>
+<p class="crowd">Crowd read: casual drop-ins, locals, friend groups, good for sampling the weekend.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2441560" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1674-hiphop-night-dj-carter-b2b-dj-kdirty-club-bangers-all-night">Full card</a></div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="route" id="tuesday">
+<div class="route-head">
+<h2>Tuesday, May 26 - post-weekend bonus</h2>
+<p>These are bonus closers for people still going after the main weekend.</p>
+</div>
+<div class="pick-grid">
+<article class="pick" id="last-man-dancing">
+<div class="poster"><img alt="Last Man Dancing poster" loading="lazy" src="assets/daily-picks/last-man-dancing.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>7:00 AM</span><span class="low">$22.35</span><span>21+</span></div>
+<h3>Last Man Dancing</h3>
+<p class="venue">Spkrbox</p>
+<p class="lineup">Playing: Amino, Loren, Antonio Lombardo, Adam Ortiz, Auntie Chanel, dej.y, DJ Hyperactive, Truncate +30 more</p>
+<p class="why">Why this made the list: a long closing-party lineup for a committed after-hours crew, not a casual first stop.</p>
+<dl class="facts"><div><dt>When</dt><dd>Tuesday, May 26, 7:00 AM to 2:00 AM</dd></div><div><dt>Signal</dt><dd>63 listed interest</dd></div></dl>
+<p class="crowd">Crowd read: committed dancers, darker room, heavy sound-system focus.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2439183" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1662-last-man-dancing">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="glow">
+<div class="poster"><img alt="GLOW poster" loading="lazy" src="assets/daily-picks/glow.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>7:00 AM</span><span class="low">$23</span><span>79 interest</span></div>
+<h3>GLOW</h3>
+<p class="venue">Third Street Bar</p>
+<p class="lineup">Playing: Delano Smith, Whodat, Rick Wade, DJ Cent, The AM/AMX, Rick Wilhite, MGUN, Nick Speed +6 more</p>
+<p class="why">Why this made the list: a cheaper closing-day house and techno option with a strong Detroit lineup.</p>
+<dl class="facts"><div><dt>When</dt><dd>Tuesday, May 26, 7:00 AM to 2:00 AM</dd></div><div><dt>Status</dt><dd>On sale - RA ticketing</dd></div></dl>
+<p class="crowd">Crowd read: committed dancers, darker room, heavy sound-system focus.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2425777" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-1601-glow">Full card</a></div>
+</div>
+</article>
+<article class="pick" id="coda">
+<div class="poster"><img alt="CODA The Closing Party poster" loading="lazy" src="assets/daily-picks/coda.jpg"/></div>
+<div class="pick-body">
+<div class="meta"><span>2:00 PM</span><span class="mid">$39.15</span><span class="strong">200 interest</span></div>
+<h3>CODA: The Closing Party</h3>
+<p class="venue">Bookie's Bar - 2208 Cass Ave, Detroit, MI 48201</p>
+<p class="lineup">Playing: Vertex Form, Joey Beltram, Frankie Bones, Alexander Technique, Keoki, DJ SOUL SLINGER, Dylan Drazen, DJ Disc +17 more</p>
+<p class="why">Why this made the list: the strongest Tuesday listed-interest signal and the best final real party on the bonus day.</p>
+<dl class="facts"><div><dt>When</dt><dd>Tuesday, May 26, 2:00 PM to 2:00 AM</dd></div><div><dt>Status</dt><dd>On sale - RA ticketing</dd></div></dl>
+<p class="crowd">Crowd read: social, groove-first, good patio or bar energy where the venue allows it.</p>
+<div class="actions"><a class="action" href="https://ra.co/events/2323466" rel="noopener noreferrer" target="_blank">Tickets</a><a class="ghost" href="index.html#event-593-coda-the-closing-party">Full card</a></div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="source-panel" id="sources">
+<h2>Sources And Method</h2>
+<p>This page is a hand-curated shortlist from the full dashboard. Event details, prices, links, lineups, and crowd notes came from the existing dashboard data, which was built from MovementParties, MovementAfters, RA/event pages, and listed source links. Prices can move by tier or sell out.</p>
+<p><a href="index.html">Open the full dashboard</a> for all 237 outside-festival listings.</p>
+</section>
+</main>
+</body>
+</html>
