@@ -21,6 +21,7 @@
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 84px; }
     body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--paper); letter-spacing: 0; }
     a { color: inherit; }
     .topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; background: rgba(9,9,9,.96); color: #fffdf8; border-bottom: 4px solid var(--acid); }
@@ -73,6 +74,22 @@
     .quick-filters strong { align-self: center; margin-right: 4px; font-size: .9rem; }
     .quick-filter { border: 1px solid #bbb2a4; border-radius: 6px; min-height: 34px; padding: 6px 9px; background: #f8f4ec; color: var(--ink); font: inherit; font-size: .84rem; font-weight: 800; cursor: pointer; }
     .quick-filter:hover { background: var(--acid); border-color: var(--acid); }
+    .daily-curation { margin: 8px 0 34px; }
+    .curation-note { background: #fffdf8; border: 1px solid var(--line); border-left: 6px solid var(--teal); border-radius: 8px; padding: 12px 14px; color: #4f4a43; line-height: 1.42; margin-bottom: 18px; }
+    .daily-group { margin: 22px 0 28px; }
+    .daily-group h3 { margin: 0 0 10px; font-size: 1.12rem; line-height: 1.2; }
+    .daily-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .daily-pick { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 9px; min-width: 0; border-top: 5px solid var(--teal); }
+    .daily-pick:nth-child(2) { border-top-color: var(--orange); }
+    .daily-pick:nth-child(3) { border-top-color: var(--pink); }
+    .daily-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+    .daily-meta span { display: inline-flex; align-items: center; min-height: 24px; border-radius: 5px; padding: 3px 7px; font-size: .74rem; font-weight: 900; background: #eee7d7; color: var(--ink); }
+    .daily-meta .price-free { background: var(--acid); }
+    .daily-meta .price-low { background: #d8f3ef; }
+    .daily-meta .price-mid { background: #ffe2c9; }
+    .daily-pick h4 { margin: 0; font-size: 1.02rem; line-height: 1.18; overflow-wrap: anywhere; }
+    .daily-pick p { margin: 0; color: #4f4a43; line-height: 1.36; font-size: .9rem; }
+    .daily-pick .ghost { align-self: flex-start; margin-top: auto; }
     .day-section { margin: 34px 0 42px; }
     .day-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-bottom: 10px; margin-bottom: 14px; border-bottom: 4px solid var(--black); }
     .day-head span { background: var(--black); color: #fff; padding: 6px 10px; border-radius: 6px; font-size: .86rem; }
@@ -112,14 +129,16 @@
     .source-panel a { color: var(--ink); font-weight: 800; }
     @media (max-width: 1180px) {
       .hero-inner { grid-template-columns: 1fr; }
-      .starter-grid, .signal-grid, .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .starter-grid, .signal-grid, .event-grid, .daily-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .stage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .controls-inner { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 720px) {
       .topbar { position: static; align-items: flex-start; flex-direction: column; padding: 12px 14px; }
+      section[id] { scroll-margin-top: 16px; }
       .hero, .controls, main { padding-left: 14px; padding-right: 14px; }
-      .metrics, .starter-grid, .signal-grid, .event-grid, .controls-inner { grid-template-columns: 1fr; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .metrics, .starter-grid, .signal-grid, .event-grid, .daily-grid, .controls-inner { grid-template-columns: 1fr; }
       .facts { grid-template-columns: 1fr; }
       h1 { font-size: 2.2rem; }
     }
@@ -135,6 +154,7 @@
 <header class="topbar">
 <div class="brand">Movement Weekend Outside-Festival Dashboard</div>
 <nav>
+<a href="#daily-picks">Daily Picks</a>
 <a href="#start-here">Start Here</a>
 <a href="#signals">Signals</a>
 
@@ -182,6 +202,128 @@
 <nav class="day-nav"><a href="#day-2026-05-22">Friday<span>55</span></a><a href="#day-2026-05-23">Saturday<span>67</span></a><a href="#day-2026-05-24">Sunday<span>72</span></a><a href="#day-2026-05-25">Monday<span>39</span></a><a href="#day-2026-05-26">Tuesday<span>4</span></a></nav>
 </section>
 <main>
+<section class="daily-curation" id="daily-picks">
+<div class="section-head">
+<h2>Personal Daily Picks</h2>
+<p>Three off-site picks per day, tuned for low cost, 21+ rooms, danceable music, and the best odds of a lively social crowd.</p>
+</div>
+<div class="curation-note">Crowd makeup is not something any listing can verify, so this does not guarantee who will be there. The picks below favor social party formats over heads-down warehouse sets: open-format club nights, house and disco rooms, ghetto-tech parties, patios, rooftops, and venues with clear friend-group energy.</div>
+<div class="daily-group">
+<h3>Friday, May 22 - cheap pre-party route</h3>
+<div class="daily-grid">
+<article class="daily-pick">
+<div class="daily-meta"><span>4:00 PM</span><span class="price-free">Free</span><span>21+</span></div>
+<h4>DESCENDANTS: An Afrohouse Experience</h4>
+<p>The Skip, Afro house and Afro tech, and an early social window in The Belt. This is the low-risk place to start before the night gets packed.</p>
+<a class="ghost" href="#event-1616-descendants-an-afrohouse-experience">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>9:00 PM</span><span class="price-low">$5</span><span>21+</span></div>
+<h4>Temple Bar - Official Weekend Disco</h4>
+<p>Cheap tech-house and disco at Temple Bar. Better for mingling and warm-up energy than going straight into a dark, serious techno room.</p>
+<a class="ghost" href="#event-1681-temple-bar-official-weekend-disco">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>10:00 PM</span><span class="price-free">Free</span><span>857 interest</span></div>
+<h4>PINK PARTY: Open Format Bangers</h4>
+<p>Big Pink, hip-hop and club, 21+, and the strongest Friday social signal in the cheap lane. If you only do one Friday event, make it this.</p>
+<a class="ghost" href="#event-1619-pink-party-open-format-bangers-problematicblackhottie-jody-simms-celex-the-">View event</a>
+</article>
+</div>
+</div>
+<div class="daily-group">
+<h3>Saturday, May 23 - best cheap night-out route</h3>
+<div class="daily-grid">
+<article class="daily-pick">
+<div class="daily-meta"><span>9:00 PM</span><span class="price-low">$5</span><span>21+</span></div>
+<h4>BOOTY MOVEMENT 2026</h4>
+<p>Temple Bar with house and ghetto tech. This is the cheapest Saturday starter that still fits the lively, dance-forward target.</p>
+<a class="ghost" href="#event-1635-booty-movement-2026">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>10:00 PM</span><span class="price-low">$23</span><span>635 interest</span></div>
+<h4>MUNCH B2B BLAKITO B2B SLOT-A</h4>
+<p>Big Pink open-format club bangers with house and hip-hop. This is the Saturday main move for a social crowd and a less niche room.</p>
+<a class="ghost" href="#event-1668-munch-b2b-blakito-b2b-slot-a-open-format-club-bangers-chicago-detroit">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>11:00 PM</span><span class="price-low">$10</span><span>after-hours</span></div>
+<h4>New Detroit Movement After Party</h4>
+<p>DJ Assault, DJ Godfather, electro, and ghetto tech for a late option that is still affordable. Use it if the group wants to keep going.</p>
+<a class="ghost" href="#event-1687-new-detroit-movement-after-party">View event</a>
+</article>
+</div>
+</div>
+<div class="daily-group">
+<h3>Sunday, May 24 - day-party plus Big Pink closer</h3>
+<div class="daily-grid">
+<article class="daily-pick">
+<div class="daily-meta"><span>2:00 PM</span><span class="price-low">$10</span><span>21+</span></div>
+<h4>The 6th Annual Detroit Patio Party</h4>
+<p>The Old Miami, house and techno, with a long patio window. This is a simple daytime choice that stays cheap.</p>
+<a class="ghost" href="#event-1663-the-6th-annual-detroit-patio-party">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>3:00 PM</span><span class="price-free">Free</span><span>21+</span></div>
+<h4>The Do-Over Block Party</h4>
+<p>The Belt Alley with house and hip-hop. Strong free Sunday pick because block parties are naturally more social than ticketed listen-only rooms.</p>
+<a class="ghost" href="#event-1653-the-do-over-block-party">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>10:00 PM</span><span class="price-low">$23</span><span>805 interest</span></div>
+<h4>GHETTO TECH at Big Pink</h4>
+<p>The Sunday main move: Big Pink, 21+, ghetto tech, and the highest cheap-night social signal for the day.</p>
+<a class="ghost" href="#event-1661-ghetto-tech-nanoos-sky-jetta-fullbodydurag-dj-killa-squid-special-guests">View event</a>
+</article>
+</div>
+</div>
+<div class="daily-group">
+<h3>Monday, May 25 - social closeout route</h3>
+<div class="daily-grid">
+<article class="daily-pick">
+<div class="daily-meta"><span>3:00 PM</span><span class="price-mid">$28.55</span><span>Spot Lite</span></div>
+<h4>Bring Dat Ass (&amp;your feet will follow)</h4>
+<p>Deep house, soulful house, and disco at Spot Lite. Not the absolute cheapest, but it is the cool daytime social pick.</p>
+<a class="ghost" href="#event-1567-bring-dat-ass-your-feet-will-follow">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>4:00 PM</span><span class="price-free">Free</span><span>119 interest</span></div>
+<h4>FIESTA HOUSE: PATIO DAY PARTY</h4>
+<p>Northern Lights Lounge with reggaeton and dembow. This is the most obvious Monday pick for a social, less music-nerd crowd.</p>
+<a class="ghost" href="#event-1733-fiesta-house-patio-day-party">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>10:00 PM</span><span class="price-free">Free</span><span>588 interest</span></div>
+<h4>HIPHOP NIGHT: DJ Carter B2B DJ KDirty</h4>
+<p>Big Pink, hip-hop and R&amp;B, 21+, free, and a strong listed-interest signal. Best Monday closer for your stated criteria.</p>
+<a class="ghost" href="#event-1674-hiphop-night-dj-carter-b2b-dj-kdirty-club-bangers-all-night">View event</a>
+</article>
+</div>
+</div>
+<div class="daily-group">
+<h3>Tuesday, May 26 - post-weekend bonus</h3>
+<div class="daily-grid">
+<article class="daily-pick">
+<div class="daily-meta"><span>7:00 AM</span><span class="price-low">$22.35</span><span>21+</span></div>
+<h4>Last Man Dancing</h4>
+<p>Spkrbox, techno and house, with a long closing-party lineup. This is for a committed after-hours crew, not a casual first stop.</p>
+<a class="ghost" href="#event-1662-last-man-dancing">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>7:00 AM</span><span class="price-low">$23</span><span>79 interest</span></div>
+<h4>GLOW</h4>
+<p>Third Street Bar with Delano Smith, Whodat, Rick Wade, and more. A cheaper closing-day house and techno option.</p>
+<a class="ghost" href="#event-1601-glow">View event</a>
+</article>
+<article class="daily-pick">
+<div class="daily-meta"><span>2:00 PM</span><span class="price-mid">$39.15</span><span>200 interest</span></div>
+<h4>CODA: The Closing Party</h4>
+<p>Bookie's Bar, house and techno, with the strongest Tuesday listed-interest signal. Pick this if you want one final real party.</p>
+<a class="ghost" href="#event-593-coda-the-closing-party">View event</a>
+</article>
+</div>
+</div>
+</section>
 <section class="starter" id="start-here">
 <div class="section-head">
 <h2>Start Here</h2>
