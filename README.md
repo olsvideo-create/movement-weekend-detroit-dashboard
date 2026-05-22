@@ -1,3 +1,3 @@
-# Detroit Movement Weekend Dashboard 2026
+# Detroit Movement Weekend Outside-Festival Dashboard 2026
 
-Static dashboard for Detroit Movement weekend events, prices, lineups, venues, and Hart Plaza set times.
+Static dashboard for Detroit Movement weekend afterparties, pre-parties, day parties, bar events, pop-ups, prices, lineups, venues, and crowd notes. Hart Plaza festival programming is intentionally excluded.
