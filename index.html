@@ -59,6 +59,20 @@
     .signal a { text-decoration: none; }
     .signal span { display: block; font-weight: 800; line-height: 1.2; }
     .signal small { display: block; color: var(--muted); margin-top: 3px; line-height: 1.25; }
+    .starter { margin: 8px 0 34px; }
+    .starter-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 14px; }
+    .pick { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px; box-shadow: var(--shadow); border-top: 5px solid var(--orange); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+    .pick:nth-child(2), .pick:nth-child(6) { border-top-color: var(--pink); }
+    .pick:nth-child(3), .pick:nth-child(7) { border-top-color: var(--teal); }
+    .pick:nth-child(4), .pick:nth-child(8) { border-top-color: var(--acid); }
+    .pick-kicker { color: var(--muted); font-size: .76rem; font-weight: 900; text-transform: uppercase; }
+    .pick h3 { margin: 0; font-size: 1.03rem; line-height: 1.15; overflow-wrap: anywhere; }
+    .pick p { margin: 0; color: #4f4a43; line-height: 1.35; font-size: .9rem; }
+    .pick .ghost { align-self: flex-start; margin-top: auto; }
+    .quick-filters { display: flex; flex-wrap: wrap; gap: 8px; background: #fffdf8; border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+    .quick-filters strong { align-self: center; margin-right: 4px; font-size: .9rem; }
+    .quick-filter { border: 1px solid #bbb2a4; border-radius: 6px; min-height: 34px; padding: 6px 9px; background: #f8f4ec; color: var(--ink); font: inherit; font-size: .84rem; font-weight: 800; cursor: pointer; }
+    .quick-filter:hover { background: var(--acid); border-color: var(--acid); }
     .day-section { margin: 34px 0 42px; }
     .day-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-bottom: 10px; margin-bottom: 14px; border-bottom: 4px solid var(--black); }
     .day-head span { background: var(--black); color: #fff; padding: 6px 10px; border-radius: 6px; font-size: .86rem; }
@@ -98,14 +112,14 @@
     .source-panel a { color: var(--ink); font-weight: 800; }
     @media (max-width: 1180px) {
       .hero-inner { grid-template-columns: 1fr; }
-      .signal-grid, .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .starter-grid, .signal-grid, .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .stage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .controls-inner { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 720px) {
       .topbar { position: static; align-items: flex-start; flex-direction: column; padding: 12px 14px; }
       .hero, .controls, main { padding-left: 14px; padding-right: 14px; }
-      .metrics, .signal-grid, .event-grid, .controls-inner { grid-template-columns: 1fr; }
+      .metrics, .starter-grid, .signal-grid, .event-grid, .controls-inner { grid-template-columns: 1fr; }
       .facts { grid-template-columns: 1fr; }
       h1 { font-size: 2.2rem; }
     }
@@ -121,6 +135,7 @@
 <header class="topbar">
 <div class="brand">Movement Weekend Outside-Festival Dashboard</div>
 <nav>
+<a href="#start-here">Start Here</a>
 <a href="#signals">Signals</a>
 
 <a href="#events">All Events</a>
@@ -167,6 +182,73 @@
 <nav class="day-nav"><a href="#day-2026-05-22">Friday<span>55</span></a><a href="#day-2026-05-23">Saturday<span>67</span></a><a href="#day-2026-05-24">Sunday<span>72</span></a><a href="#day-2026-05-25">Monday<span>39</span></a><a href="#day-2026-05-26">Tuesday<span>4</span></a></nav>
 </section>
 <main>
+<section class="starter" id="start-here">
+<div class="section-head">
+<h2>Start Here</h2>
+<p>If you only want the cool stuff without studying 237 listings, start with these. They cover the biggest rooms, the music-head picks, the free local option, and the late-late afters.</p>
+</div>
+<div class="starter-grid">
+<article class="pick">
+<div class="pick-kicker">Big room techno · Saturday night</div>
+<h3>Wall of Sound</h3>
+<p>DVS1 and RE/FORM at Bert's Warehouse. This is the packed, serious, high-production techno pick if you want the biggest signal on the list.</p>
+<a class="ghost" href="#event-571-wall-of-sound-dvs1-re-form-present">View event</a>
+</article>
+<article class="pick">
+<div class="pick-kicker">Social house party · Saturday night</div>
+<h3>House of EFUNK Day 1</h3>
+<p>Soul Clap's TV Lounge party is a safer crowd-pleaser: busy, social, danceable, and easier to recommend to mixed friend groups.</p>
+<a class="ghost" href="#event-1456-soul-clap-s-house-of-efunk-detroit-day-1">View event</a>
+</article>
+<article class="pick">
+<div class="pick-kicker">Cool-kid underground · Friday night</div>
+<h3>T4T LUV NRG</h3>
+<p>Tangent Gallery, strong interest, and a more underground crowd. A good pick when you want the weekend to feel less generic.</p>
+<a class="ghost" href="#event-568-t4t-luv-nrg-i-t-presents">View event</a>
+</article>
+<article class="pick">
+<div class="pick-kicker">Music-head legend pick · Sunday evening</div>
+<h3>Theo Parrish at Dreamtroit</h3>
+<p>One of the cleanest Detroit-specific choices for someone who cares about the music and wants a memorable set, not just a random party.</p>
+<a class="ghost" href="#event-585-theo-parrish-at-dreamtroit">View event</a>
+</article>
+<article class="pick">
+<div class="pick-kicker">Raw hardware techno · Friday night</div>
+<h3>100% LIVE Techno</h3>
+<p>All-hardware sets, heavier sound, and a more focused techno crowd. Best for people who want the real underground edge.</p>
+<a class="ghost" href="#event-570-100-live-techno-all-hardware-sets">View event</a>
+</article>
+<article class="pick">
+<div class="pick-kicker">Free local sampler · Friday daytime</div>
+<h3>Bang The Book</h3>
+<p>Free, long-running, and packed with local DJs. The easiest low-risk way to start the weekend before choosing a paid night party.</p>
+<a class="ghost" href="#event-1580-bang-the-book-bang-tech-12s-30th-anniversary">View event</a>
+</article>
+<article class="pick">
+<div class="pick-kicker">Serious after-hours · Sunday night</div>
+<h3>No Way Back</h3>
+<p>A known deep-afterhours choice at Tangent Gallery. Choose this for committed dancers and a less casual crowd.</p>
+<a class="ghost" href="#event-583-no-way-back">View event</a>
+</article>
+<article class="pick">
+<div class="pick-kicker">Sunrise stamina test · Monday morning</div>
+<h3>Where Are My Keys</h3>
+<p>5 AM start, high interest, and clearly an after-after option. Only pick this if your group wants to keep going into morning.</p>
+<a class="ghost" href="#event-729-where-are-my-keys-detroit">View event</a>
+</article>
+</div>
+<div class="quick-filters" aria-label="Quick filters">
+<strong>Quick filters:</strong>
+<button class="quick-filter" data-search="" data-price="all" type="button">Reset</button>
+<button class="quick-filter" data-search="official movement afterparty" data-price="all" type="button">Official afterparties</button>
+<button class="quick-filter" data-search="late-night|after-hours" data-price="all" type="button">Late night</button>
+<button class="quick-filter" data-search="" data-price="free" type="button">Free</button>
+<button class="quick-filter" data-search="" data-price="under25" type="button">Under $25</button>
+<button class="quick-filter" data-search="house" data-price="all" type="button">House</button>
+<button class="quick-filter" data-search="techno" data-price="all" type="button">Techno</button>
+<button class="quick-filter" data-search="ghetto tech" data-price="all" type="button">Ghetto tech</button>
+</div>
+</section>
 <section id="signals">
 <div class="section-head">
 <h2>High-Signal Views</h2>
@@ -5943,7 +6025,8 @@ and NORMALGUY</p>
       const price = priceFilter.value;
       let count = 0;
       cards.forEach(card => {
-        const matchesSearch = !q || card.dataset.search.includes(q);
+        const searchTerms = q.includes('|') ? q.split('|').map(term => term.trim()).filter(Boolean) : [q];
+        const matchesSearch = !q || searchTerms.some(term => card.dataset.search.includes(term));
         const matchesDay = day === 'all' || card.dataset.day === day;
         const matchesPrice = price === 'all' || card.dataset.price === price;
         const show = matchesSearch && matchesDay && matchesPrice;
@@ -5953,6 +6036,15 @@ and NORMALGUY</p>
       visibleCount.textContent = `${count} visible`;
     }
     [searchBox, dayFilter, priceFilter].forEach(el => el.addEventListener('input', applyFilters));
+    document.querySelectorAll('.quick-filter').forEach(button => {
+      button.addEventListener('click', () => {
+        searchBox.value = button.dataset.search || '';
+        priceFilter.value = button.dataset.price || 'all';
+        dayFilter.value = button.dataset.day || 'all';
+        applyFilters();
+        document.getElementById('events').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   </script>
 </body>
 </html>
